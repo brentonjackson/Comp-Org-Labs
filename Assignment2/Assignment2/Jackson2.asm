@@ -5,7 +5,7 @@
 ExitProcess PROTO, dwExitCode:DWORD
 
 
-COMMENT ;   Student: Brenton Jackson
+COMMENT ;		Student: Brenton Jackson
         	Class: CSC3210
         	Assignment#: 2 
        		Description: Computes algebraic expression
