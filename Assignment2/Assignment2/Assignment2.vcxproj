@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="Jackson1.asm" />
+    <MASM Include="Jackson2.asm" />
     <MASM Include="Jackson3.asm" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

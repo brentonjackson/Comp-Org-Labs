@@ -4,6 +4,13 @@
 
 ExitProcess PROTO, dwExitCode:DWORD
 
+
+COMMENT ;   Student: Brenton Jackson
+        	Class: CSC3210
+        	Assignment#: 2 
+       		Description: Computes algebraic expression
+;
+
 .data
 val1 word 120h
 val2 word 39h
