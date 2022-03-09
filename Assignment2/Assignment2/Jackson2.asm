@@ -11,7 +11,7 @@ val3 sdword 4
 
 
 .code
-main PROC 
+main2 PROC 
 	; ebx = (-val1 + val2) + (val3 * 3)
 	mov eax, val3
 	add eax, val3
@@ -22,5 +22,5 @@ main PROC
 
 	
 	INVOKE ExitProcess, 0
-main ENDP
-END main
+main2 ENDP
+END main2
