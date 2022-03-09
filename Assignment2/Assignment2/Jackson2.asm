@@ -5,22 +5,26 @@
 ExitProcess PROTO, dwExitCode:DWORD
 
 .data
-val1 sdword 23
-val2 sdword -35
-val3 sdword 4
-
+val1 byte 12
+val2 word 9
+val3 dword 2
+val4 byte 20
 
 .code
-main2 PROC 
-	; ebx = (-val1 + val2) + (val3 * 3)
+main PROC 
+	; ecx = -(val3 + val1) + (-val4 - val2) + 3
 	mov eax, val3
-	add eax, val3
-	add eax, val3
-	mov ebx, val2
-	sub ebx, val1
-	add ebx, eax
-
+	add al, val1
+	neg eax			; eax = -(val3+val1)
 	
+	movzx bx, val4
+	neg bx
+	sub bx, val2 ; bx = (-val4 - val2)
+	
+	add ax, bx   ; ax =  -(val3+val1)+(-val4 - val2)
+	add eax, 3		; eax = -(val3 + val1) + (-val4 - val2) + 3
+	
+	mov ecx, eax
 	INVOKE ExitProcess, 0
-main2 ENDP
-END main2
+main ENDP
+END main
