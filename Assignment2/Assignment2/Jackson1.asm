@@ -10,7 +10,6 @@ val2 word 39h
 val3 word 20h
 val4 word 27h
 
-
 .code
 main PROC 
 	; edx = (val3 + val4) - (val2 - val1) - (5/3 * 7)
@@ -33,10 +32,6 @@ main PROC
 	sub ax, bx  ; ax = (val3+val4)-(val2-val1)-(5/3 * 7)
 	
 	movzx edx, ax
-
-
-
-	
 	INVOKE ExitProcess, 0
 main ENDP
 END main
