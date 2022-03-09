@@ -6,7 +6,7 @@ ExitProcess PROTO, dwExitCode:DWORD
 
 
 COMMENT ;	
-			Student: Brenton Jackson
+		Student: Brenton Jackson
         	Class: CSC3210
         	Assignment#: 2 
        		Description: Adds expressions to an array
