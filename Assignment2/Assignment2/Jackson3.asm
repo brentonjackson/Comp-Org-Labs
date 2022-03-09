@@ -4,23 +4,42 @@
 
 ExitProcess PROTO, dwExitCode:DWORD
 
-.data
-val1 sdword 23
-val2 sdword -35
-val3 sdword 4
 
+COMMENT ;   Student: Brenton Jackson
+        	Class: CSC3210
+        	Assignment#: 2 
+       		Description: Adds expressions to an array
+;
+
+
+.data
+x word 10
+y word 15
+r word 4
+
+.data?
+z dword 3 DUP(?)
 
 .code
 main PROC 
-	; ebx = (-val1 + val2) + (val3 * 3)
-	mov eax, val3
-	add eax, val3
-	add eax, val3
-	mov ebx, val2
-	sub ebx, val1
-	add ebx, eax
+	; z0 = x+130
+	; z1 = y-x+z0
+	; z2 = r+x-z1
 
-	
+	movzx eax, x
+	add ax, 130
+	mov z, eax		; z0 = x+130
+
+	movzx ebx, y
+	sub bx, x
+	add bx, ax
+	mov z+4, ebx		; z1 = y-x+z0
+
+	movzx eax, r
+	add ax, x
+	sub ax, bx
+	mov z+8, eax		; z2 = r+x-z1
+
 	INVOKE ExitProcess, 0
 main ENDP
 END main
